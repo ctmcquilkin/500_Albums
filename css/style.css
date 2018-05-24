@@ -102,7 +102,7 @@ input[type="checkbox"] {
 }
 
 /* List component */
-#block ul {
+#block ol {
   list-style: none;
   margin: 0;
   padding: 15px;
@@ -110,32 +110,32 @@ input[type="checkbox"] {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-#block ul li {
+#block ol li {
   display: flex;
   padding: 10px 5px;
 }
 
-#block ul li:not(:last-child) {
+#block ol li:not(:last-child) {
   border-bottom: 1px solid #EEE;
 }
 
-#block ul li:hover {
+#block ol li:hover {
   background: #3498DB;
   cursor: pointer;
 }
-#block ul li:hover p {
+#block ol li:hover p {
   color: white;
 }
 
 /*list item image wrapper*/
-#block ul img {
+#block ol img {
   flex-shrink: 0;
   height: 80px;
   border-radius: 10%;
 }
 
 /*list item content*/
-#block ul p {
+#block ol p {
   flex-grow: 1;
   padding: 0 20px;
   margin-top: 5px;

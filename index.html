@@ -58,9 +58,9 @@ var DynamicSearch = React.createClass({
     return (
       <div>
         <input type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="Filter list" />
-        <ul>
+        <ol>
           { albums.map(function(album){ return <li><img className="image" src={album.url}/> <span>{album.index} {album.name}</span> </li> }) }
-        </ul>
+        </ol>
       </div>
     )
   }
