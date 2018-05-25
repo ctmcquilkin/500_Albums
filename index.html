@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="author" content="Chuck McQuilkin">
   <title>500 Best Albums</title>
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
+  <meta name="description" content="React App thingy to help me find the best albums when I am at the record store">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="css/style.css"> 
+<!--   <link rel="manifest" href="manifest.json"> -->
 </head>
 
 <body>
@@ -42,6 +42,12 @@ var DynamicSearch = React.createClass({
     this.setState({searchString:event.target.value});
     console.log("scope updated!");
   },
+  
+  resetFilter : function(event){
+    this.setState({
+        searchString : ''
+    });
+  },
 
   render: function() {
 
@@ -56,10 +62,11 @@ var DynamicSearch = React.createClass({
     }
 
     return (
-      <div>
+      <div id="list-wrapper">
         <input type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="Filter list" />
+        <button onClick={this.resetFilter}>Reset</button>
         <ol>
-          { albums.map(function(album){ return <li><img className="image" src={album.url}/> <span>{album.index} {album.name}</span> </li> }) }
+          { albums.map(function(album){ return <li><img className="image" src={album.url} alt="Thumbnail"/><p>{album.index}. {album.name}</p></li> }) }
         </ol>
       </div>
     )
