@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="manifest" href="manifest.json">
+    
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta names="apple-mobile-web-app-status-bar-style"content="black-translucent"/>
+    <meta name="apple-mobile-web-app-title" content="500Albums">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ea5e4f"/>
+    <meta name="author" content="Chuck McQuilkin">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>500 Best Albums</title>
+    <meta name="description" content="Web App to help me find the best albums when I am at the record store">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png" />
+
+</head>
+<body>
+
+<div id="content">
+<div class="credit">
+  According to <a href="https://www.rollingstone.com/music/lists/500-greatest-albums-of-all-time-20120531" target="_blank" title="Rolling Stone in 2012">Rolling Stone</a>
+</div>
+    <h1 id="headline">500 Best Albums</h1>
+  <div id="block">
+      <nav>
+      <ul id="nav">
+        <li><a href="#headline">Top</a></li>
+        <li><a href="#200">200</a></li>
+        <li><a href="#300">300</a></li>
+        <li><a href="#400">400</a></li>
+        <li><a href="#500">500</a></li>
+      </ul>
+    </nav>
+      <input type="text" id="filterInput" class="search-bar"  onkeyup="filterAlbums()" placeholder="Search ablums..."><button onclick="clearFilter()">Reset</button>
+      <ol id="albums"></ol>
+  </div>
+</div>
+<noscript><a href="NoScript.html">Static 500 Album List</a></noscript>
+    <script async src="js/app.js"></script>
+
+
+    <script>
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+            
+</body>
+</html>
