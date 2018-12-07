@@ -4,8 +4,8 @@
   "theme_color": "#ea5e4f",
   "background_color": "#ea5e4f",
   "display": "standalone",
-  "Scope": "/",
-  "start_url": "/",
+  "Scope": "https://github.com/ctmcquilkin/500_Albums",
+  "start_url": "https://github.com/ctmcquilkin/500_Albums",
   "icons": [
     {
       "src": "images/icons/22x22.png",
