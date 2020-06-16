@@ -8,7 +8,7 @@ function append(parent, el) {
 
 var ul = document.getElementById('albums');
 
-fetch('https://api.myjson.com/bins/u6ixa')
+fetch('https://api.jsonbin.io/b/5ee3bba62f5fd957fda8ee23')
     .then(response => response.json())
     .then(data => {
         let albums = data;
